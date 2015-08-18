@@ -18,23 +18,20 @@ func (p *Exit) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 	styledTemplate.Execute(w, Body{
-		Class: "goodbye",
 		Body: fmt.Sprintf(`
-<div class="hello">
-	Shutting Down
+<div class="goodbye">
+<img src="https://fatmintech.files.wordpress.com/2014/06/c8c75-6a00e551c39e1c883401a3fd1ba08f970b-pi.png" width="50%" height="50%"></img>
 </div>
-
-<div class="my-index">My Index Is</div>
-
-<div class="index">%d</div>
-<div class="mid-color">Uptime: %s</div>
-<div class="bottom-color"></div>
+<div class="my-index-goodbye">Shutting down instance</div>
+<div class="index-goodbye">%d</div>
+<div class="mid-color-goodbye"></div>
+<div class="bottom-color-goodbye"></div>
     `, index, time.Since(p.Time)),
 	})
 
 	go func() {
 		time.Sleep(100 * time.Millisecond)
-		fmt.Println("Lattice-App shutting down")
+		fmt.Println("shutting down")
 		os.Exit(1)
 	}()
 }
