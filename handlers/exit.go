@@ -20,7 +20,7 @@ func (p *Exit) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	styledTemplate.Execute(w, Body{
 		Body: fmt.Sprintf(`
 <div class="goodbye">
-<img src="https://fatmintech.files.wordpress.com/2014/06/c8c75-6a00e551c39e1c883401a3fd1ba08f970b-pi.png" width="50%" height="50%"></img>
+<img src="http://demoimages.cfapps.io/docker_logo.png"></img>
 </div>
 <div class="my-index-goodbye">Shutting down instance</div>
 <div class="index-goodbye">%d</div>

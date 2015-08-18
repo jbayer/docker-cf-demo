@@ -104,7 +104,7 @@ body {
   color: #fff;
   font-size: 30px;
   line-height: 120px;
-  background-color: rgb(36,184,235);
+  background-color: rgb(0,151,198);
   text-align: center;
 }
 

@@ -19,9 +19,7 @@ func (p *Hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 <div class="hello">
 	<img src="http://demoimages.cfapps.io/docker_logo.png"></img>
 </div>
-
 <div class="my-index">My Index Is</div>
-
 <div class="index">%d</div>
 <div class="mid-color">Uptime: %s</div>
 <div class="bottom-color"></div>
