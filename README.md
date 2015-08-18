@@ -1,12 +1,19 @@
-# Lattice-App - a simple Go webapp for playing with Lattice
+# a simple Go webapp for deploying docker to Cloud Foundry or Lattice
 
-Lattice-App is packaged as a docker image at cloudfoundry/lattice-app
+hosted as a docker image at jbayer/lattice-app
 
 To push to [Lattice](https://github.com/cloudfoundry-incubator/lattice) using [ltc](https://github.com/cloudfoundry-incubator/lattice/ltc):
 
 ```bash
-ltc create lattice-app cloudfoundry/lattice-app
+ltc create lattice-app jbayer/lattice-app
 ```
+
+To push to [Cloud Foundry](https://github.com/cf-release) using [cf](https://github.com/cloudfoundry/cli):
+
+```bash
+cf docker-push docker-app jbayer/lattice-app
+```
+
 
 ### Endpoints
 
